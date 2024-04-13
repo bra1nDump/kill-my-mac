@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.bra1ndump.kill-my-mac-at12am</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>touch</string>
+        <!-- <string>"Current time: $(date +"%H:%S")"</string> -->
+        <!-- escaping in xml https://stackoverflow.com/a/1091953/5278310 -->
+        <!-- <string>></string> -->
+        <string>/tmp/kill-12am-test</string>
+    </array>
+
+    <!-- Debug - every second -->
+    <key>StartInterval</key>
+    <integer>1</integer>
+
+    <!-- <key>StandardErrorPath</key>
+	<string>/dev/null</string>
+	<key>StandardOutPath</key>
+	<string>/dev/null</string> -->
+
+    <!-- <key>StartCalendarInterval</key>
+    <dict>
+        <key>Minute</key>
+        <integer>0</integer>
+        <key>Hour</key>
+        <integer>0</integer>
+    </dict> -->
+</dict>
+</plist>
