@@ -19,9 +19,9 @@
 	<key>StandardOutPath</key>
 	<string>/Users/kirilldubovitskiy/projects/kill-my-mac-at-12am/test-std-out-and-error</string>
 
-    <!-- Debug - run every 10 minutes - minimum frequency -->
+    <!-- Debug - run every 60 seconds - minimum frequency is 10 seconds -->
     <key>StartInterval</key>
-    <integer>10</integer>
+    <integer>60</integer>
 
     <!-- <key>StartCalendarInterval</key>
     <dict>
