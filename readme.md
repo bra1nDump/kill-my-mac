@@ -8,7 +8,14 @@
 - I will distribute it as a brew formula to make it easy to install, bash is not available in Sandboxed apps, so no App Store
 
 ## What:
-- Install with `brew install hard-sleep`
+- Install with `brew install sleep-by`
+- Once installed do the setup with
+  - Run `sleep-by`
+  - Prompted:
+    - Choose a time when you want to ensure your computer is not running
+    - Format is: 00:20-06:00, no spaces, period start, period end, 24 hr format
+    - In this example starting at 20 past midnight until 6, if your computer is not asleep, it will be forcefully shut down
+  - Enter the time - default is 00:00-06:00 (midnight until 6am): Get
 
 # TODO:
 
@@ -76,6 +83,12 @@
 - When run
 - Check what time it is - if it is in the dead zone - play you are in the dead zone https://open.spotify.com/track/7xJ8xGw68KCazVjHC7cEp5?si=377207fb81c0496c
 - You fucker have restarted your computer, bonk, go to bed
+
+## Storing configuration
+For binaries installed through Homebrew on macOS, user configuration is typically stored in one of several locations depending on the nature of the application and its configuration needs:
+
+Home Directory:
+~/.config/ - Many applications use this directory for storing configuration files, following the XDG Base Directory Specification.
 
 ## Handling sleep 
 ## pmset -g interesting man page exserpt

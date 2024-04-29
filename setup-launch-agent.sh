@@ -7,7 +7,7 @@ USER_HOME=$(eval echo ~$USER)
 PROJECT_DIR=$(pwd)
 
 # Plist name
-PLIST_NAME="com.bra1ndump.kill-my-mac-at12am.plist"
+PLIST_NAME="com.bra1ndump.shutdown-during-sleep-hours.plist"
 
 # Ensure a soft link is present
 ln -sf "$PROJECT_DIR/$PLIST_NAME" "$USER_HOME/Library/LaunchAgents/$PLIST_NAME"

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>com.bra1ndump.shutdown-during-sleep-hours</string>
+
+        <!-- TODO: Needs to be templated probably depending on how brew is installed -->
+
+        <!-- Run every 60 seconds - minimum frequency is 10 seconds -->
+        <key>StartInterval</key>
+        <integer>60</integer>
+
+        <!-- Run the script -->
+        <key>ProgramArguments</key>
+        <array>
+            <string>~/projects/kill-my-mac-at-12am/shutdown-during-sleep-hours.sh</string>
+        </array>
+
+        <!-- Configure logs -->
+        <key>StandardErrorPath</key>
+        <string>~/projects/kill-my-mac-at-12am/test-std-out-and-error</string>
+        <key>StandardOutPath</key>
+        <string>~/projects/kill-my-mac-at-12am/test-std-out-and-error</string>
+    </dict>
+</plist>
