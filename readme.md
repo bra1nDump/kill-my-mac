@@ -4,7 +4,7 @@ Are you sick and tired of **staying up late because of your mac?** This script s
 ## How it works
 - Your computer will be shut down during hours **12am - 6am**
 - 2.5hr, 1hr, and 10 minutes before the sleep hours start the computer will warn you, if your sound is on
-- Open an issue if you want a feature to customize the sleep hours, for now you can edit the [shutdown-job.sh](./shutdown-job.sh) script yourself
+- Open an issue if you want customizable sleep hours, for now edit the [shutdown-job.sh](./shutdown-job.sh)
 
 ## How to install:
 
