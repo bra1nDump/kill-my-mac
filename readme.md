@@ -43,11 +43,10 @@ You can do either option:
 
 # Later:
 - Package with Homebrew tap
-- Allow configuring sleep time - will need to symlink the cli bash script that will update the configurations so its accessible from anywhere
+  - More user trust because of the brew prefix
+  - Easier upgrading (not sure if the taps get auto-upgraded though)
 
-- [better onboarding / configuration experience]
-- Once installed do the setup with
-  - Run `sleep-by`
+- Allow configuring sleep time - will need to symlink the cli bash script that will update the configurations so its accessible from anywhere
   - Prompted:
     - Choose a time when you want to ensure your computer is not running
     - Format is: 00:20-06:00, no spaces, period start, period end, 24 hr format
@@ -56,6 +55,7 @@ You can do either option:
 
 - How can I make editing the configuration difficult?
 - By allowing to skip the shutdown once by looking at a message to self you wrote when setting this up, and forcing to look at it for 5 minutes before allowing to skip
+
 - Maybe switch to python? Since it will be installed by brew, I can just set python as a dependency. Its installed everywhere already so does not really matter. Bash is fucking ridiculous. Functions are unlike in any other programming language
 
 # Alternatives:
