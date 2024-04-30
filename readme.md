@@ -1,4 +1,4 @@
-# kill my mac and let me sleep
+# kill my mac, let me sleep
 Are you sick and tired of **staying up late because of your mac?** This script suggests you to wind down using customizable voice annoucements. If your mac is still on during sleep hours - **this script will shut your mac down for you.** You are welcome.
 
 ## How it works
