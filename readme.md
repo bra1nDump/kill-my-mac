@@ -1,12 +1,10 @@
 # kill my mac and let me sleep
-- I want to got to bed at a consistent time for health, productivity, and social reasons
-- When I don't go to bed early, chances are I am coding / watching something on my mac
-- The system suggestions to 'go to bed' are too easy to ignore, I tune them out magically
+Are you sick and tired of staying up late because you can't stop coding or watching something on your mac? This script suggests you to wind down using customizable voice annoucements. If you don't put your computer to sleep yourself by the start of sleep hours, it will shut down for you. You are welcome.
 
 ## How it works
 - Your computer will be shut down during hours **12am - 6am**
-- 1 hour and 10 minutes before the sleep hours start the computer will warn you, if your sound is on
-- Open an issue if you want a feature to customize the sleep hours
+- 2.5hr, 1hr, and 10 minutes before the sleep hours start the computer will warn you, if your sound is on
+- Open an issue if you want a feature to customize the sleep hours, for now you can edit the [shutdown-job.sh](./shutdown-job.sh) script yourself
 
 ## How to install:
 
