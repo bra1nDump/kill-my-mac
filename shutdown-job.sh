@@ -69,8 +69,7 @@ if [ $current_minutes -ge $dead_zone_start_minutes ] \
     && [ $current_minutes -lt $dead_zone_end_minutes ]; \
 then
     say "Hey man, its me from both yesterday and tomrorow - GO TO SLEEP! I am shutting this down for your own good."
-    sleep 10 # Give time to save work
+    sleep 10 # Give 10 seconds to save work
 
     osascript -e 'tell application "System Events" to shut down'
 fi
-

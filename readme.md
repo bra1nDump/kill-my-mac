@@ -4,12 +4,15 @@
 - The system suggestions to 'go to bed' are too easy to ignore, I tune them out magically
 
 ## How it works
-- If computer is not asleep or shut down when sleep hours start - it will be shut down
-- Sleep hours currently are hardcoded: 12am - 6am, open an issue if you want to see them customized
+- Your computer will be shut down during hours **12am - 6am**
 - 1 hour and 10 minutes before the sleep hours start the computer will warn you, if your sound is on
+- Open an issue if you want a feature to customize the sleep hours
 
 ## How to install:
-In your terminal run
+
+> Warning: Before you install, please understand that it might be hard to turn the computer back on during sleep hours. Every time the computer is turned on, you will have 1 minute to disable it from shutting down your computer.
+
+In your terminal run:
 
 ```bash
 echo "Cloning the repo"
@@ -19,6 +22,11 @@ cd kill-my-mac
 echo "Setting up"
 ./install.sh
 ```
+
+## How to uninstall?
+You can do either option:
+- In terminal run `rm ~/Library/LaunchAgents/com.bra1ndump.kill-my-mac.plist`, this will prevent the script from running. You can run `./install.sh` to enable again
+- Open the [shutdown-job.sh](./shutdown-job.sh) script where you installed this project and comment out the last if statement that has this line: `osascript -e 'tell application "System Events" to shut down'`. Uncomment it again to re-enable
 
 ## How does it actually work?
 - It installs a [LaunchAgent](./templates/com.bra1ndump.shutdown-during-sleep-hours.plist) that runs shutdown-job every minute
