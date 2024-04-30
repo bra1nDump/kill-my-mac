@@ -12,14 +12,14 @@
 In your terminal run
 
 ```bash
-# Clone the repo
+echo "Cloning the repo"
 git clone https://github.com/bra1nDump/kill-my-mac.git
 cd kill-my-mac
 
-# So you can run kill-my-mac from anywhere on your computer
-ln -sf kill-my-mac.sh /usr/local/bin/kill-my-mac
+echo "Linking executable to /usr/local/bin so its accessible anywhere in terminal"
+sudo ln -sf $(pwd)/kill-my-mac.sh /usr/local/bin/kill-my-mac
 
-# Run this to configure the app
+echo "Setting up"
 kill-my-mac
 ```
 
