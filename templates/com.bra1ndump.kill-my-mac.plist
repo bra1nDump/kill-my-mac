@@ -11,12 +11,12 @@
 
         <!-- Run every 60 seconds - minimum frequency is 10 seconds -->
         <key>StartInterval</key>
-        <integer>10</integer>
+        <integer>60</integer>
 
         <!-- Run the script -->
         <key>ProgramArguments</key>
         <array>
-            <string>{{PROJECT_DIR}}/kill-my-mac.sh</string>
+            <string>{{PROJECT_DIR}}/shutdown-job.sh</string>
         </array>
 
         <!-- Configure logs -->
