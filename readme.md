@@ -26,6 +26,7 @@ echo "Setting up"
 ## How to uninstall?
 You can do either option:
 - In terminal run `rm ~/Library/LaunchAgents/com.bra1ndump.kill-my-mac.plist`, this will prevent the script from running. You can run `./install.sh` to enable again
+- In the directory where you cloned the project run `./uninstall.sh`. Same as above.
 - Open the [shutdown-job.sh](./shutdown-job.sh) script where you installed this project and comment out the last if statement that has this line: `osascript -e 'tell application "System Events" to shut down'`. Uncomment it again to re-enable
 
 ## How does it actually work?
