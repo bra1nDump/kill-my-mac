@@ -15,6 +15,10 @@
 - Check what time it is - if it is in the dead zone - play you are in the dead zone https://open.spotify.com/track/7xJ8xGw68KCazVjHC7cEp5?si=377207fb81c0496c
 - You fucker have restarted your computer, bonk, go to bed
 
+### Adding a command line utility to configure the app post-installation
+echo "Linking executable to /usr/local/bin so its accessible anywhere in terminal"
+sudo ln -sf $(pwd)/kill-my-mac.sh /usr/local/bin/kill-my-mac
+
 ## Storing configuration
 For binaries installed through Homebrew on macOS, user configuration is typically stored in one of several locations depending on the nature of the application and its configuration needs:
 

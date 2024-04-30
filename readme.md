@@ -16,11 +16,8 @@ echo "Cloning the repo"
 git clone https://github.com/bra1nDump/kill-my-mac.git
 cd kill-my-mac
 
-echo "Linking executable to /usr/local/bin so its accessible anywhere in terminal"
-sudo ln -sf $(pwd)/kill-my-mac.sh /usr/local/bin/kill-my-mac
-
 echo "Setting up"
-kill-my-mac
+./install.sh
 ```
 
 ## How does it actually work?
@@ -38,7 +35,7 @@ kill-my-mac
 
 # Later:
 - Package with Homebrew tap
-- Allow configuring sleep time
+- Allow configuring sleep time - will need to symlink the cli bash script that will update the configurations so its accessible from anywhere
 
 - [better onboarding / configuration experience]
 - Once installed do the setup with

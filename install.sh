@@ -26,5 +26,5 @@ plutil -lint $LAUCH_AGENT
 ln -sf $LAUCH_AGENT "$USER_HOME/Library/LaunchAgents/$PLIST_NAME"
 
 # Unload and load the plist - this will restart the agent
-launchctl unload "$USER_HOME/Library/LaunchAgents/$PLIST_NAME"
+launchctl unload "$USER_HOME/Library/LaunchAgents/$PLIST_NAME" || true
 launchctl load "$USER_HOME/Library/LaunchAgents/$PLIST_NAME"
