@@ -29,4 +29,4 @@ ln -sf $LAUCH_AGENT "$USER_HOME/Library/LaunchAgents/$PLIST_NAME"
 launchctl unload "$USER_HOME/Library/LaunchAgents/$PLIST_NAME" || true
 launchctl load "$USER_HOME/Library/LaunchAgents/$PLIST_NAME"
 
-echo "kill-my-mac installed successfully. WARNING: Please understand that it might be hard to turn the computer back on during sleep hours. Every time the computer is turned on, you will have 1 minute to disable it from shutting down your computer."
+echo "kill-my-mac installed successfully.\n\nWARNING: Please understand that it might be hard to turn the computer back on during sleep hours. Every time the computer is turned on, you will have 1 minute to disable it from shutting down your computer."
