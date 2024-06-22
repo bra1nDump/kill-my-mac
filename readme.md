@@ -21,6 +21,14 @@ echo "Setting up"
 ./install.sh
 ```
 
+## How to make sure it works correctly?
+TODO: Currently you can change the sleep hours to be closer to current time in the [shutdown-job.sh](./shutdown-job.sh) script. You can also change the warning times.
+
+## I want a more agressive version!
+I got you! How agressive?
+- To make sure I get asked for the password / touch id after every sleep - search in System Settings for Lock Screen and set to 'Immediately' ![](./tutorial-find-lock-screen-immedeately.png)
+- To make the computer shut down instead of sleeping, uncomment piece of [shutdown-job.sh](./shutdown-job.sh), this line: `osascript -e 'tell application "System Events" to shut down'`
+
 ## How to uninstall?
 You can do either option:
 - In terminal run `rm ~/Library/LaunchAgents/com.bra1ndump.kill-my-mac.plist`, this will prevent the script from running. You can run `./install.sh` to enable again

@@ -15,11 +15,17 @@ if [[ $(echo "$sleep_wake_events" | tail -n 1 | grep "Sleep" ) != "" ]]; then
     exit 0
 fi
 
+#
+# ----------- MODIFY IF NEEDED ------------
+#
 # Define dead zone start and end
+
 dead_zone_start_hour=0
 dead_zone_start_minute=0
 dead_zone_end_hour=6
 dead_zone_end_minute=0
+
+# ------------------------------------------
 
 # Calculate dead zone start and end in minutes from midnight
 dead_zone_start_minutes=$((dead_zone_start_hour * 60 + dead_zone_start_minute))
@@ -65,8 +71,18 @@ fi
 if [ $current_minutes -ge $dead_zone_start_minutes ] \
     && [ $current_minutes -lt $dead_zone_end_minutes ]; \
 then
-    say "Hey man, its me from both yesterday and tomrorow - GO TO SLEEP! I am shutting this down for your own good."
+    say "Hey, its me from both yesterday and tomrorow - GO TO SLEEP! Sleeping now ..."
     sleep 10 # Give 10 seconds to save work
 
-    osascript -e 'tell application "System Events" to shut down'
+    #
+    # ----------- MODIFY IF NEEDED ------------
+    #
+    # DEFAULT: Put computer to sleep
+    #
+    # To shut down instead, comment out the line below and uncomment the line after
+    #
+    osascript -e 'tell application "System Events" to sleep'
+    # osascript -e 'tell application "System Events" to shut down'
+
+    # ------------------------------------------
 fi
