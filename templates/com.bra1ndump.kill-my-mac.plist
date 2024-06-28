@@ -17,6 +17,7 @@
         <key>ProgramArguments</key>
         <array>
             <string>{{PROJECT_DIR}}/shutdown-job.sh</string>
+            <string>{{PROJECT_DIR}}</string>
         </array>
 
         <!-- Configure logs -->

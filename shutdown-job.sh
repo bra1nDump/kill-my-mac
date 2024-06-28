@@ -4,13 +4,23 @@ echo "Local time zone is:" $(date +"%Z")
 echo "Checking if in dead zone. Current time:" $(date +"%H:%M:%S")
 
 echo "Checking if computer is asleep - if so, do nothing"
-sleep_wake_events=$(pmset -g log | grep -e " Sleep  " -e " Wake  ")
+# sleep_wake_events=$(pmset -g log | grep -e " Sleep  " -e " Wake  ")
 # Example output:       
 # 2024-04-29 13:03:49 -0700 Sleep                 Entering Sleep state due to 'Clamshell Sleep' ...
 # 2024-04-29 13:05:06 -0700 Wake                  Wake from Deep Idle [CDNVA] : due to SMC.     ...
 
-# Check if the last event is a sleep event
-if [[ $(echo "$sleep_wake_events" | tail -n 1 | grep "Sleep" ) != "" ]]; then
+# Show arguments to this script
+echo "Arguments to this script:" $@
+
+# Get current script's directory - first argument is the script's path
+script_dir=$1
+sleep_check_script="$script_dir/sleep-check/sleep-check-macos-universal"
+
+# Evaluate the sleep check script, which is in the same directory as this script
+asleep_or_awake=$($sleep_check_script)
+echo "Asleep or awake:" $asleep_or_awake
+
+if [[ $asleep_or_awake == "Asleep" ]]; then
     echo "Computer is asleep. Human is being good. Not attempting to shut down."
     exit 0
 fi
